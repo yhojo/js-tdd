@@ -49,9 +49,9 @@ describe('釣り銭の残りが管理出来る', function() {
   });
 
   it('お金は入っているか？', function() {
-    expect(wallet.coins[5]).toBe(10);
+    expect(wallet.get_num_coin(5)).toBe(10);
     wallet.set_coins(5, 3); // 5円を3枚に設定
-    expect(wallet.coins[5]).toBe(3);
+    expect(wallet.get_num_coin(5)).toBe(3);
   });
   // TODO: 合計金額(total())が正しく計算できるか確認して見よう
 });
